@@ -71,8 +71,11 @@ def addAccount():
 def viewall():
 	"""this function allows viewing of all accounts the user has"""
 	print(Credential.display_accounts())
-	
+
 def delete_account():
+	"""a function for deleting an account
+       the user has to indicate the account to be removed
+	"""
 	Credential.delete_credential(input("what account do you want to delete ? "))
 
 def search_account():
