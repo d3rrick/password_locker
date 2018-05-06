@@ -42,6 +42,7 @@ def login():
 		return True
 
 def register():
+	"""this method allows registration to be done by entering the username and and the master password"""
 	username = input("enter your username : ")
 	master1 = input("enter a password of your choice : ")
 	master2 = input("please enter your password again")
