@@ -19,19 +19,12 @@ class TestCredential(unittest.TestCase):
 		"""this methods searches for the number of credentials for a given user"""
 		print(self.newlist)
 		self.assertEqual(len(self.newlist),1)
-		
+
 	def test_search_for_credentials(self):
 		"""this method checks whether the searched account matches to any account in the system"""
 		test_credential = Credential("github", "muriithiderro","muriithiderro@gmail.com","hhrh4ui4jr")
 		found_credential = Credential("github", "muriithiderro","muriithiderro@gmail.com","hhrh4ui4jr")
 		self.assertEqual(found_credential.account, "github")
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
