@@ -120,15 +120,19 @@ def main():
 				print("you want to create an account?")
 				addAccount()
 			elif choice ==2:
+				"""option to view all the accounts"""
 				print("view all the accounts")
 				viewall()
 			elif choice ==3:
+				"""option to delete an account"""
 				print("delete an account? ")
 				delete_account()
 			elif choice == 4:
+				"""option to search for an account"""
 				print("search an account ")
 				search_account()
 			elif choice == 5:
+				"""option to leave the application"""
 				print("logging out")
 				loggedin = False
 				print("bye, thanks for using this app. log in again to continue enjoying..")
@@ -137,4 +141,5 @@ def main():
 			sys.exit(3)
 
 if __name__ == '__main__':
+	"""the application execution begins here"""
 	main()
