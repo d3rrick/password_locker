@@ -90,6 +90,7 @@ def landing_section():
 	login, register or leave the app"""
 	selecting = True;
 	while selecting:
+		"""this loop continues to execute until a login or register function returns a true value"""
 		inp = int(input("1: login, 2: register, 3: Leave : "))
 		if inp == 1:
 			return login()
@@ -103,6 +104,9 @@ def landing_section():
 			screen("invalid choice, please try again!")
 
 def main():
+	"""
+	
+	"""
 	screen("hello and welcome to password locker")
 	decided = landing_section()
 	if decided:
