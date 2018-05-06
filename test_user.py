@@ -20,7 +20,6 @@ class TestUser(unittest.TestCase):
 	"""
 	This method sets up the data needed to test User class"""
 	
-     
 	def test_instanciation(self):
 		"""this method checks whether instances are created properly"""
 		self.assertEqual(self.user1.username, 'admin')
