@@ -54,6 +54,9 @@ def register():
 		landing_section = True
 
 def addAccount():
+	"""this method enables addition of credentials
+        the data is stored in a list
+	"""
 	acc = input("please enter your account name : ")
 	usname = input("please enter your username : ")
 	email = input("please enter your email : " )
@@ -66,7 +69,9 @@ def addAccount():
 	Credential(acc, usname,email,generate_password(passw))
 
 def viewall():
+	"""this function allows viewing of all accounts the user has"""
 	print(Credential.display_accounts())
+	
 def delete_account():
 	Credential.delete_credential(input("what account do you want to delete ? "))
 
