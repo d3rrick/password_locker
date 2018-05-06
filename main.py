@@ -79,10 +79,15 @@ def delete_account():
 	Credential.delete_credential(input("what account do you want to delete ? "))
 
 def search_account():
+	"""a function to search an acount
+       this function allows the user to enter the account he/she wants
+	"""
 	acc = input("which account are you searching for ? ")
 	screen(Credential.search_credential(acc))
 
 def landing_section():
+	"""this is the first function (after main) to be executed, it allows the user to specify either to
+	login, register or leave the app"""
 	selecting = True;
 	while selecting:
 		inp = int(input("1: login, 2: register, 3: Leave : "))
