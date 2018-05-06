@@ -14,12 +14,13 @@ class Credential:
 
 	@classmethod
 	def search_credential(cls,account):
-		
-		for i in cls.credential_list:
-			for k,v in i.items():
-				if v == account:
-					return f"{cls.dots} \n  || account name || username  || email  || password \n {cls.dots} \n  || {i['account']} ||  {i['username']} || {i['email']} || {i['password']}"
-				
+		if cls.credential_list:
+			for i in cls.credential_list:
+				for k,v in i.items():
+					if v == account:
+						return f"{cls.dots} \n  || account name || username  || email  || password \n {cls.dots} \n  || {i['account']} ||  {i['username']} || {i['email']} || {i['password']}"
+		else:
+			print("credentials list is empty")
 		
 	@classmethod
 	def display_accounts(cls):
