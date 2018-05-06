@@ -9,21 +9,28 @@ class TestUser(unittest.TestCase):
 		print("setup class")
 
 	@classmethod
-	"""this method is executed after each test"""
 	def tearDownClass(cls):
+		"""this method is executed after each test"""
 		print("teardown class")
 
 	def setUp(self):
+		"""
+	This method sets up the data needed to test User class"""
 		self.user1 = User("admin", "12345")
 		self.user2 = User('new',"12345")
 		
-	"""
-	This method sets up the data needed to test User class"""
-	
-	def test_instanciation(self):
-		"""this method checks whether instances are created properly"""
+	def test_init(self):
+		"""this methods checks whether instantiation is done well"""
 		self.assertEqual(self.user1.username, 'admin')
-		
+		self.assertEqual(self.user1.masterkey, "12345")
+	def tearDown(self):
+		User.users = dict()
+		""" run to clean up the class"""
+	# def test_instanciation(self):
+	# 	"""this method checks whether instances are created properly"""
+	# 	self.assertEqual(self.user1.username, 'admin')
+	
+
 	@classmethod
 	def list_users(cls):
 		print("hii")
