@@ -1,40 +1,44 @@
-# Github users and Repository Search
+# Password Locker Application
 
-## Github search website allows users to search for a GitHub username and the repositories that belong to a perticular user.
-#### By **Derrick** created on, 28.04.2018
+## The password locker App allows a user to register his/her credentials and to create multiple accounts for various accounts.
+#### By **Derrick** created on, May 5th 2018 
 
 ## Description
-### This website allows users to search for a GitHub username and the repositories that belong to a perticular user, see some basic information of that user eg number of followers, number of repositories and search repositories.
+## This Application is python based and runs on terminal, it allows a user to register his/her credentials and to create multiple accounts eg for facebook,twitter github etc etc, by giving your account name and email and specifying how long you would like your password to be. Afterwards the user can manage all his accounts, creating new ones,deleting,searching and even deleting multiple accounts.
 
-##Flow of the App.
-#### (ensure you are connected to the intenet as the application uses github api)
-
-+ User enters the name of a github user.
-+ A user is displayed with some basic information.
-+ The user can also search repositories.
+## Behaviour of the application
++ The user run the main file on the terminal >python3 main.py
++ The user is prompted to either, login, register or quite.
++ Based on response, either the user exits the app, or after successful login or registration redirected to accounts management area.
++ While on the account area, the user can choose to either, create a new account, view all the accounts, delete an account or logout.
++ The app exits on users choice to logout.
 
 ## Development
-### The development of this app relied on these aspects.
-+ Generation of components, custom pipe and directives.
-+ Generation of a service to make api calls to github.
-+ Use of promises to make asyncronous calls to the Api required data and create instances of classes.
-+ creation of models i.e User and Repository model to pick 
-+ Generation of access token from github and placing it in a .env file and hiding it using .gitignore file.
+### The development cycle of the password locker app.
++ The password locker app is a python terminal based application.
++ Two classes, namely User and Credential are created to create a user and Credential instances.
++ Tests to see the behaviour of these classes is done to ensure they function as expected.
++ The main file ensures the graphical interface logic is maintained and to communicate to the classes via class methods and properties.
 
-## Technologies Used
-+ Html
-+ Css
-+ Typescript
-+ Angular
-+ Git
-+ Nodejs
-+ Bootstrap v4
+### Important packages used in app development.
+- **sys** module to allow termination of the app.
+- **time** module to allow some time delay before some other action.
+- **string** module to have access to all string, numbers and alphanumerics, to allow generation of passwords.
+- **random** to allow genration of random passwords.
 
-## known bugs
-#### No known bugs
+## Technology Used
++ Python3.6
+
+## Test Driven Development
+Testing was done using python inbuild test tool called **unittest**
+
+## Bugs and Development.
+### Some additional features to be included in future.
++ Use encryption algorithims to hash passwords rather than randomly generating them.
++ Store user credentials in a database.
 
 ## Further help
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get Further help you can visit the official [python](https://www.python.org/) documentation.
 
 ## Licence
 MIT (c) 2017 [muriithi derrick](https://github.com/muriithiderro)
