@@ -105,16 +105,18 @@ def landing_section():
 
 def main():
 	"""
-	
+	this is the first function to be executed, 
+	the landing section is called here, and if the return value is true, then the password locker options are unlocked..
 	"""
 	screen("hello and welcome to password locker")
-	decided = landing_section()
+	decided = landing_section()#this means that if landing page returned a true value 
 	if decided:
 		screen("you are now logged in to the password locker!")
 		loggedin = True
-		while loggedin:
+		while loggedin:#this allows the user to have multiple selections within the same area --> smart password locker
 			choice = int(input("1)create account\n2)view all accounts\n3)delete account\n4)search account\n5)logout "))
 			if choice ==1:
+				"""option to create an account"""
 				print("you want to create an account?")
 				addAccount()
 			elif choice ==2:
