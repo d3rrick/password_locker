@@ -7,6 +7,7 @@ from user import User
 from credential import Credential
 
 def screen(x):
+	"""this is for wrapping some texts together for a good view"""
 	print("#"*50)
 	print(""*2)
 	print(x)
@@ -14,7 +15,10 @@ def screen(x):
 	print("#"*50)
 
 def login():
-	
+	"""this method handles login capabilities for the user
+      the method first checks whether there are any users , the allows login or redirects to registration or 
+      to smart password locker
+	"""
 	if User.users:
 		uname = input("please enter your username : " )
 		masterk = input("please enter your master password ")
